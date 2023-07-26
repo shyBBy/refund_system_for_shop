@@ -51,6 +51,9 @@ export const CreateRefundForm = () => {
                 },
                 body: JSON.stringify(data),
             });
+            
+            console.log('cale res', res)
+            console.log('samo res ok', res.ok)
 
             if (!res.ok) {
                 toast.error(`${data.message}`, {
@@ -58,6 +61,7 @@ export const CreateRefundForm = () => {
                     theme: "light",
                     autoClose: 2000,
                 })
+                console.log('tu wywala blad')
                 return
             }
             return res.json().then((data) => {
