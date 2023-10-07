@@ -138,7 +138,7 @@ export const CreateRefundForm = () => {
                         <Controller
                             name="receiptOrInvoiceNumber"
                             control={control}
-                            rules={{required: true}}
+                            rules={{required: false}}
                             render={({field: {...field}}) => (
                                 <TextField
                                     {...field}
